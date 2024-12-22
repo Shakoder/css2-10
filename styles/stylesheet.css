@@ -21,12 +21,12 @@ main> :first-child {
     width: 100%;
 }
 
-.mainContainer>div> :first-child {
+.meetingContainer> :first-child {
     padding-bottom: 20px;
     display: block;
 }
 
-.mainContainer>div> :nth-child(2) {
+.meetingContainer :nth-child(2) {
     padding-bottom: 8px;
     color: #6941C6;
     font-family: Inter, sans-serif;
@@ -37,11 +37,11 @@ main> :first-child {
     display: block;
 }
 
-.mainContainer>div> :nth-child(3) {
+.meetingContainer :nth-child(3) {
     padding-bottom: 8px;
 }
 
-.mainContainer>div> :nth-child(3) span {
+.meetingContainer :nth-child(3) span {
     color: #181D27;
     font-family: Inter, sans-serif;
     font-size: 24px;
@@ -51,18 +51,18 @@ main> :first-child {
     vertical-align: middle;
 }
 
-.mainContainer>div> :nth-child(3) img {
+.meetingContainer :nth-child(3) img {
     float: right;
     vertical-align: middle;
     transition: transform 0.4s ease;
     cursor: pointer;
 }
 
-.mainContainer>div> :nth-child(3) img:hover {
+.meetingContainer :nth-child(3) img:hover {
     transform: translate(5px, -5px);
 }
 
-.mainContainer>div> :nth-child(4) {
+.meetingContainer :nth-child(4) {
     padding-bottom: 24px;
     color: #535862;
     font-family: Inter, sans-serif;
@@ -76,7 +76,7 @@ main> :first-child {
     margin-right: 8px;
 }
 
-.mainContainer>div button {
+.mainContainer button {
     padding: 8px 12px;
     border-radius: 30px;
     font-size: 14px;
@@ -85,26 +85,248 @@ main> :first-child {
     font-weight: 500;
     cursor: pointer;
     transition: transform 0.4s ease;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
-.mainContainer > div button:hover {
+.mainContainer>div button:hover {
     transform: translateY(10px);
 }
 
-.linear {
+.meetingContainer button:first-of-type {
+    border: 1px solid #E9D7FE;
+    background-color: #F9F5FF;
+    color: #6941C6;
+}
+
+.meetingContainer button:first-of-type:hover {
+    background-color: #F9F5FF;
+}
+
+.meetingContainer button:nth-of-type(2) {
+    border: 1px solid #C7D7FE;
+    background-color: #EEF4FF;
+    color: #3538CD;
+}
+
+.meetingContainer button:nth-of-type(2):hover {
+    background-color: #F6F9FF;
+}
+
+.meetingContainer button:last-child {
+    border: 1px solid #FCCEEE;
+    background-color: #FDF2FA;
+    color: #C11574;
+}
+
+.meetingContainer button:last-child:hover {
+    background-color: #FEF7FD;
+}
+
+
+/* SECOND PART OF MAIN */
+.firstRowContainer {
+    padding-bottom: 48px;
+}
+
+.firstRowContainer>div,
+.secondRowContainer>div {
     width: 20vw;
+    /* 384 divided by 1920 and multiplied by 100=20% of the viewport's width */
     display: inline-block;
     vertical-align: middle;
 }
 
-.linear:not(:nth-child(4)):not(:last-child) {
-    padding-right: 32px;
+.firstRowContainer>div:not(:last-child),
+.secondRowContainer>div:not(:last-child) {
+    margin-right: 1.45vw;
+    /* 32 divided by 1920 and multiplied by 100=1.45% of the viewport's width */
 }
 
-.linear:nth-child(2), .linear:nth-child(3), .linear:nth-child(4) {
-    padding-bottom: 48px;
+.firstRowContainer>div> :first-child,
+.secondRowContainer>div> :first-child {
+    padding-bottom: 20px;
 }
 
-.linear:nth-child(2) > :nth-child(4) > span span {
-    display: block;
+.firstRowContainer>div> :nth-child(2),
+.secondRowContainer>div> :nth-child(2) {
+    padding-bottom: 8px;
+    color: #6941C6;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.firstRowContainer>div> :nth-child(3),
+.secondRowContainer>div> :nth-child(3) {
+    color: #181D27;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    padding-bottom: 8px;
+}
+
+.firstRowContainer>div> :nth-child(3) img,
+.secondRowContainer>div> :nth-child(3) img {
+    float: right;
+    vertical-align: middle;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.firstRowContainer>div> :nth-child(3) img:hover,
+.secondRowContainer>div> :nth-child(3) img:hover {
+    transform: translate(5px, -5px);
+}
+
+.firstRowContainer>div> :nth-child(4),
+.secondRowContainer>div> :nth-child(4) {
+    padding-bottom: 24px;
+    color: #535862;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.interviewContainer button:first-of-type {
+    color: #026AA2;
+    border: 1px solid #B9E6FE;
+    background-color: #F0F9FF;
+}
+
+.interviewContainer button:first-of-type:hover {
+    background-color: #F6FCFF;
+}
+
+
+.interviewContainer button:nth-of-type(2) {
+    color: #C11574;
+    border: 1px solid #FCCEEE;
+    background: #FDF2FA;
+}
+
+.interviewContainer button:nth-of-type(2):hover {
+    background-color: #FEF7FC;
+}
+
+.interviewContainer button:last-of-type {
+    border: 1px solid #FCCEEE;
+    background: #FDF2FA;
+    color: #C11574;
+}
+
+.interviewContainer button:last-of-type:hover {
+    background-color: #E28CB2;
+}
+
+.apiContainer button:first-of-type {
+    border: 1px solid #ABEFC6;
+    background: #ECFDF3;
+    color: #067647;
+}
+
+.apiContainer button:first-of-type:hover {
+    background-color: #42A278;
+}
+
+.apiContainer button:last-of-type {
+    border: 1px solid #FCCEEE;
+    background: #FDF2FA;
+    color: #C11574;
+}
+
+.apiContainer button:last-of-type:hover {
+    background-color: #FEF7FD;
+}
+
+.lessonContainer button:first-of-type {
+    border: 1px solid #E9D7FE;
+    background: #F9F5FF;
+    color: #6941C6;
+}
+
+.lessonContainer button:first-of-type:hover {
+    background-color: #9A7DDB;
+}
+
+.lessonContainer button:last-of-type {
+    border: 1px solid #D5D9EB;
+    background: #F8F9FC;
+    color: #363F72;
+}
+
+.lessonContainer button:last-of-type:hover {
+    background-color: #E1E3EB;
+}
+
+.secondRowContainer> :first-child>button:first-of-type {
+    color: #026AA2;
+    border: 1px solid #B9E6FE;
+    background-color: #F0F9FF;
+}
+
+.secondRowContainer> :first-child>button:first-of-type:hover {
+    background-color: #D6EDF8;
+}
+
+.secondRowContainer> :first-child>button:nth-of-type(2) {
+    border: 1px solid #C7D7FE;
+    background-color: #EEF4FF;
+    color: #3538CD;
+}
+
+.secondRowContainer> :first-child>button:nth-of-type(2):hover {
+    background-color: #D1E4F7;
+}
+
+.secondRowContainer> :first-child>button:nth-of-type(3) {
+    color: #B93815;
+    border: 1px solid #F9DBAF;
+    background-color: #FEF6EE;
+}
+
+.secondRowContainer> :first-child>button:nth-of-type(3):hover {
+    background-color: #F5E0B3;
+}
+
+.secondRowContainer> :nth-child(2)>button:first-of-type, .secondRowContainer> :last-child> button:first-of-type {
+    border: 1px solid #E9D7FE;
+    background: #F9F5FF;
+    color: #6941C6;
+}
+
+.secondRowContainer> :nth-child(2)>button:first-of-type:hover,
+.secondRowContainer> :last-child>button:first-of-type:hover {
+    background-color:  #D7C9F4;
+}
+
+.secondRowContainer> :nth-child(2)>button:nth-of-type(2),
+.secondRowContainer> :last-child>button:nth-of-type(2) {
+    border: 1px solid #C7D7FE;
+    background-color: #EEF4FF;
+    color: #3538CD;
+}
+
+.secondRowContainer> :nth-child(2)>button:nth-of-type(2):hover,
+.secondRowContainer> :last-child>button:nth-of-type(2):hover {
+    background-color: #D1E2F7;
+}
+
+.secondRowContainer> :last-child {
+    position: relative;
+    top: 15px;
+}
+
+.secondRowContainer> :last-child> :nth-child(3) img {
+    position: relative;
+    bottom: 30px;
 }
